@@ -386,7 +386,7 @@ class Metric(metaclass=ABCMeta):
             sacrelogger.warning("That's 100 lines that end in a tokenized period ('.')")
             sacrelogger.warning("It looks like you forgot to detokenize your test data, which may hurt your score.")
             sacrelogger.warning("If you insist your data is detokenized, or don't care, you can suppress this message with the `force` parameter.")
-        print(f'Stats: {stats}')
+        print(f'Stats: {stats}\nToken count: {tok_count}')
         return stats
 
     def sentence_score(self, hypothesis: str, references: Sequence[str]) -> Any:
