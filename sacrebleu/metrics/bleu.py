@@ -227,6 +227,7 @@ class BLEU(Metric):
         :param max_ngram_order: If given, it overrides the maximum n-gram order (default: 4) when computing precisions.
         :return: A `BLEUScore` instance.
         """
+        print(f'Correct in BLEU computation: {correct}\nTotal in BLEU computation: {total}')
         assert smooth_method in BLEU.SMOOTH_DEFAULTS.keys(), \
             "Unknown smooth_method {smooth_method!r}"
 
