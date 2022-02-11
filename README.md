@@ -1,5 +1,7 @@
 # sacreBLEU
 
+pip install -e git+https://github.com/Heflin-Zoho/sacrebleu.git@master#egg=sacrebleu
+
 [![PyPI version](https://img.shields.io/pypi/v/sacrebleu)](https://img.shields.io/pypi/v/sacrebleu)
 [![Python version](https://img.shields.io/pypi/pyversions/sacrebleu)](https://img.shields.io/pypi/pyversions/sacrebleu)
 [![GitHub issues](https://img.shields.io/github/issues/mjpost/sacreBLEU.svg)](https://github.com/mjpost/sacrebleu/issues)
