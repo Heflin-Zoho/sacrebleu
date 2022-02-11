@@ -243,8 +243,10 @@ class BLEU(Metric):
         # n-gram precisions
         precisions = [0.0 for x in range(max_ngram_order)]
 
+        print(f"Correct: {correct}")
         # Early stop if there are no matches (#141)
         if not any(correct):
+            print("Stopped")
             return BLEUScore(0.0, correct, total, precisions, bp, sys_len, ref_len)
 
         smooth_mteval = 1.
