@@ -268,7 +268,7 @@ class BLEU(Metric):
             # It is only available through the API and off by default
             if effective_order:
                 eff_order = n
-
+            
             if correct[n - 1] == 0:
                 if smooth_method == 'exp':
                     smooth_mteval *= 2
@@ -277,6 +277,8 @@ class BLEU(Metric):
                     precisions[n - 1] = 100. * smooth_value / total[n - 1]
             else:
                 precisions[n - 1] = 100. * correct[n - 1] / total[n - 1]
+        
+        print(f'Effective order: {eff_order}')
 
         # Compute BLEU score
         score = bp * math.exp(
