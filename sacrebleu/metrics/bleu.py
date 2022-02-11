@@ -301,6 +301,7 @@ class BLEU(Metric):
         :param stats: A list or numpy array of segment-level statistics.
         :return: A `BLEUScore` object.
         """
+        print(f'Eff order in _compute_score_from_stats: {self.effective_order}')
         return self.compute_bleu(
             correct=stats[2: 2 + self.max_ngram_order],
             total=stats[2 + self.max_ngram_order:],
