@@ -346,7 +346,7 @@ class Metric(metaclass=ABCMeta):
         else:
             # A variable number of refs exist
             self.num_refs = -1
-        print(f'Ref_cache: {ref_cache}')
+        # print(f'Ref_cache: {ref_cache}')
         return ref_cache
 
     def _extract_corpus_statistics(self, hypotheses: Sequence[str],
